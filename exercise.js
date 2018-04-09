@@ -26,7 +26,18 @@ var calculateCentroid = function(points){
     //----------------------------------
     //  YOUR CODE
     //----------------------------------    
+    var length = points.length;
+    var xSum = 0;
+    var ySum = 0;
+    points.forEach(function(point){
+        xSum += point.x;
+        ySum += point.y;
+    })
 
+    var xCentroid = xSum/length;
+    var yCentroid = ySum/length;
+
+    return ({x: Math.floor(xCentroid), y: Math.floor(yCentroid)});
     // return centroid with the following format
     // return {x:10, y:30};  
 };
